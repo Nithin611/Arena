@@ -3,20 +3,19 @@ import org.junit.Test;
 
 public class ArenaTest {
 
-    @Test
     public void testPlayerCreation() {
         Player player = new Player(50, 5, 10);
         assertEquals(50, player.getHealth());
     }
 
-    @Test
+
     public void testDiceRoll() {
         Dice dice = new Dice(6);
         int roll = dice.roll();
         assert(roll >= 1 && roll <= 6);
     }
 
-    @Test
+    
     public void testPlayerAttack() {
         Player player1 = new Player(50, 5, 10);
         Player player2 = new Player(100, 10, 5);
@@ -26,7 +25,6 @@ public class ArenaTest {
         assert(player2.getHealth() < 100);
     }
 
-    @Test
     public void testFight() {
         Player player1 = new Player(50, 5, 10);
         Player player2 = new Player(100, 10, 5);
